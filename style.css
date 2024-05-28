@@ -1,0 +1,402 @@
+:root{
+    --bg:#2F303A;
+    --bgblack:#202027;
+    --textcolor:#FFFFFF;
+    --btn:#1762A7;
+    --darkred:#BC3A80;
+    --clred: rgba(188, 58, 128, 0.1);
+    --clblue: rgba(23, 98, 167, 0.1);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{
+    background-color: var(--bg);
+    color: var(--textcolor);
+    padding: 0;
+}
+/* header */
+header{
+    height: 80px;
+    width: 80%;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+header img{
+    width: 150px;
+    height: 50px;
+}
+
+header ul{
+    display: flex;
+}
+header ul li{
+    list-style: none;
+    margin-left: 40px;
+}
+a{
+    text-decoration: none;
+    color: var(--textcolor);
+}
+/* home */
+.home{
+    display: flex;
+    height: 400px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.home .left{
+    width: 45%;
+    height: 475px;
+    align-content: center;
+    margin-right: 100px;
+    position: relative;
+}
+.home .left img{
+    width: 365px;
+    height: 555px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+}
+#cercle-red{
+    width: 208px;
+    height: 208px;
+    background-color: var(--clred);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+#cercle-blue{
+    width: 110px;
+    height: 110px;
+    background-color: var(--clblue);
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: -1;
+}
+.home .right{
+    align-content: center;
+    
+}
+.home .right p{
+    color: var(--textcolor);
+    font-size: 20px;
+}
+.home .right h1{
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.home .right button{
+    background-color: var(--btn);
+    color: var(--textcolor);
+    padding: 10px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#cercle-blue-right{
+    position: absolute;
+    top: 350px;
+    left: 970px;
+    z-index: -1;
+}
+/* featur */
+.featur{
+    display: flex;
+    height: 350px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+.featur .right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 350px;
+    justify-content: center;
+}
+.featur .right .albums{
+    display: flex;
+    gap: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.albums .album{
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    align-content: center;
+    background-color: var(--bgblack);
+}
+.albums .album img{
+    width: 30px;
+    height: 30px;
+}
+.featur .right h1{
+    font-size: 30px;
+}
+.featur .left{
+    align-content: center;
+}
+.featur .left img{
+    width: 500px;
+    height: 330px;
+    background-size: cover;
+    background-position: center;
+}
+/* join */
+.join{
+    display: flex;
+    height: 450px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.join .left{
+    width: 52%;
+    height: 450px;
+    align-content: center;
+    font-size: 45px;
+    margin: auto;
+}
+.join .left span{
+    color: var(--darkred);
+}
+.join form{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    height: 450px;
+    margin: auto;
+    background-color: var(--bgblack);
+    border-radius: 10px;
+    padding-top: 80px;
+}
+.join form input{
+    height: 35px; 
+    width: 80%;
+    margin: 15px auto;
+    border-radius: 5px;
+    border: 2px solid var(--btn);
+    background: transparent;
+}
+.join form label{
+    margin-left: 10%;
+}
+.join form button{
+    height: 45px; 
+    width: 80%;
+    margin: 50px auto;
+    border-radius: 5px;
+    border: none;
+    color: var(--textcolor);
+    background-color: var(--btn);
+    cursor: pointer;
+}
+/* footer */
+footer{
+    display: flex;
+    height: 80px;
+    background-color: var(--bgblack);
+    margin-top: 40px;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: space-between;
+}
+footer a{
+    font-weight: bold;
+    margin-right: 20px;
+}
+footer  .right .bx{
+    font-size: 20px;
+    margin-right: 5px;
+}
+/* responsive */
+@media (max-width:941px){
+    .home .left img{
+        width: 255px;
+        height: 375px;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+    #cercle-red{
+        width: 180px;
+        height: 180px;
+        bottom: 100px;
+        left: 0;
+    }
+    .home .right p{
+        color: var(--textcolor);
+        font-size: 15px;
+    }
+    .home .right h1{
+        font-size: 25px;
+        margin-top: 8px;
+        margin-bottom: 25px;
+    }
+    .home .right button{
+        width: 90px;
+    }
+    /* featur */
+    .featur .right{
+        width: 45%;
+        height: 250px;
+    }
+    .albums .album{
+        width: 50px;
+        height: 50px;
+        font-size: 10px;
+    }
+    .albums .album img{
+        width: 13px;
+        height: 13px;
+    }
+    .featur .right h1{
+        font-size: 18px;
+    }
+    .featur .left img{
+        width: 290px;
+        height: 230px;
+    }
+
+    .join form{
+        height: 350px;
+        padding-top: 50px;
+    }
+    .join form input{
+        height: 25px; 
+        margin: 10px auto;
+    }
+    .join form button{
+        height: 35px; 
+        margin: 40px auto;
+    }
+    .join .left{
+        height: 350px;
+        font-size: 29px;
+    }
+}
+@media (max-width:565px){
+    .home{
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        margin: 0 auto;
+        margin-top: 50px;
+        align-items: center;
+    }
+    .home .left img{
+        width: 150px;
+        height: 260px;
+        background-size: cover;
+        background-position: center;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+    #cercle-red{
+        width: 100px;
+        height: 100px;
+        bottom: 60;
+        left: 0;
+    }
+    #cercle-blue{
+        display: none;
+    }
+    .home .right p{
+        color: var(--textcolor);
+        font-size: 10px;
+    }
+    .home .right h1{
+        font-size: 20px;
+        margin-top: 8px;
+        margin-bottom: 25px;
+    }
+    .home .right button{
+        background-color: var(--btn);
+        color: var(--textcolor);
+        padding: 10px;
+        width: 60px;
+        border: none;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+    .featur{
+        display: flex;
+        flex-direction: column;
+        height: 350px;
+        margin-top: 100px;
+        margin-bottom: 0px;
+        align-items: center;
+    }
+    .albums .album{
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+    }
+    .albums .album img{
+        width: 10px;
+        height: 10px;
+    }
+    .featur .right h1{
+        font-size: 15px;
+    }
+    .join{
+        display: flex;
+        flex-direction: column;
+    }
+    .join form{
+        height: 250px;
+        padding-top: 30px;
+    }
+    .join form input{
+        height: 25px; 
+        margin: 5px auto;
+    }
+    .join form button{
+        height: 35px; 
+        margin: 30px auto;
+       font-size: 12px;
+    }
+    .join .left{
+        height: 50px;
+        font-size: 22px;
+    }
+    .join form label{
+       font-size: 12px;
+    }
+    footer a{
+        font-weight: bold;
+        margin-right: 15px;
+        font-size: 12px;
+    }
+    footer  .right .bx{
+        font-size: 15px;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width:656px){
+    .featur .left img{
+        width: 250px;
+        height: 130px;
+        margin-top: 30px;
+    }
+}

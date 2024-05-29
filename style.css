@@ -196,6 +196,10 @@ a{
     border-radius: 5px;
     border: 2px solid var(--btn);
     background: transparent;
+    color: white;
+}
+.join form input:focus{
+    outline: none;
 }
 .join form label{
     margin-left: 10%;
